@@ -6,6 +6,31 @@
   color: white;
 }
 
+.line {
+  fill: none;
+  stroke: white;
+  stroke-width: 3;
+}
+
+.line2 {
+  fill: none;
+  stroke: red;
+  stroke-width: 3;
+}
+
+.xAxis {
+  /* color of the line */
+  color: white;
+  /* color of the number */
+  stroke: white;
+}
+
+.yAxis {
+  color: white;
+  stroke: white;
+}
+
+
 body {
   background-color: rgb(17, 36, 55);
 }
