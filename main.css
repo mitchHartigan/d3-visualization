@@ -1,0 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i&display=swap');
+
+.title {
+  text-align: center;
+  font-family: 'Open Sans';
+  color: white;
+}
+
+body {
+  background-color: rgb(17, 36, 55);
+}
