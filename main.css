@@ -8,13 +8,13 @@
 
 .line {
   fill: none;
-  stroke: white;
+  stroke: #ed980f;
   stroke-width: 3;
 }
 
 .line2 {
   fill: none;
-  stroke: red;
+  stroke: #ed980f;
   stroke-width: 3;
 }
 
@@ -30,6 +30,13 @@
   stroke: white;
 }
 
+.centerElem {
+  display: inline-block;
+}
+
+.centerParent {
+  text-align: center;
+}
 
 body {
   background-color: rgb(17, 36, 55);

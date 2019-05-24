@@ -1,20 +1,5 @@
-console.log('main.js loaded!');
-
-var margin = {top: 50, right: 50, bottom: 50, left: 50}
-  , width = window.innerWidth - margin.left - margin.right - 400 // Use the window's width 
-  , height = window.innerHeight - margin.top - margin.bottom - 200; // Use the window's height
-
-
-const xScale = d3.scaleTime()
-                .domain([new Date(1962,0,0), new Date(2018,0,0)])
-                .range([0, width]) 
-
-
-const yScale = d3.scaleLinear()
-                .domain([0, 40])
-                .range([height, 0])
-
-var dataset = [
+{
+  "Data": [
     {"year": "1962", "value": "34.3764241"},
     {"year": "1963", "value": "30.64904115"},
     {"year": "1964", "value": "27.16101642"},
@@ -71,45 +56,5 @@ var dataset = [
     {"year": "2015", "value": "0.438846487"},
     {"year": "2016", "value": "0.558206467"},
     {"year": "2017", "value": "0.58414277"}
-]
-
-var line = d3.line()
-              // D3 expects date formats to have months and days in order to scale correctly,
-              // and we fake that all the data was recorded on the first day of the year by adding 
-              // 0,0 after the year.
-              .x(function(d) { return xScale(new Date(d.year, 0, 0)) })
-              .y(function(d) { return yScale(d.value) }) // set the y values for the line generator 
-              .curve(d3.curveMonotoneX) // apply smoothing to the line
-
-const svg = d3.select('h2').append('svg')
-  .attr('width', width + margin.left + margin.right)
-  .attr('height', height + margin.bottom + margin.top)
-  .append('g')
-    .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')'); // these values, (50), are padding values
-
-svg.append('g')
-    .attr('class', 'xAxis')
-    .attr('transform', 'translate(0,' + height + ')')
-    .call(d3.axisBottom(xScale))
-
-svg.append('g')
-    .attr('class', 'yAxis')
-    .call(d3.axisLeft(yScale))
-
-svg.append('path')
-    .datum(dataset)
-    .attr('class', 'line')
-    .attr('d', line)
-
-// svg.append('path')
-//     .datum(dataset2)
-//     .attr('class', 'line2')
-//     .attr('d', line)
-
-
-console.log(dataset);
-
-  
-
-
-
+  ]
+}
