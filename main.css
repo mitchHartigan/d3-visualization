@@ -99,14 +99,20 @@
   background-size: cover;
 }
 
- rect {
+.treemapText {
+  color: white;
+  font-family: 'Open Sans';
+  font-size: 10pt;
+}
+
+rect {
   fill: steelblue;
   opacity: 0.5;
   stroke: white;
 }
 
 body {
-  background-color: rgb(17, 36, 55);
+  background-color: #112437;
   margin: 0px;
   padding: 0px;
 }

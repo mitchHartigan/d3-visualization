@@ -244,154 +244,251 @@ var dataset2 = [
   }
 ]
 
-var treemapDataset = 
-{
-  "name": "exports",
-  "children" :  [
-    {
-      "name" :"Electronics",
-      "children" : [
-        {
-          "name": "Electronics",
-          "value": 17
-        }
-      ]
-    },
+// var treemapDataset = 
+// {
+//   "name": "exports",
+//   "children" :  [
+//     {
+//       "name" :"Electronics",
+//       "children" : [
+//         {
+//           "name": "Electronics",
+//           "value": 17
+//         }
+//       ]
+//     },
 
-    {
-      "name": "Materials",
-      "children": [
-        {
-          "name": "Oil",
-          "value": 16
-        },
-        {
-          "name": "Metal Products",
-          "value": 0.87
-        },
-        {
-          "name": "Processed Minerals",
-          "value": 0.57
-        },
-        {
-          "name": "Inorganic Salts and Acids",
-          "value": 0.45
-        },
-        {
-          "name": "Mining",
-          "value": 0.37
-        }
-      ]
-    },
+//     {
+//       "name": "Materials",
+//       "children": [
+//         {
+//           "name": "Oil",
+//           "value": 16
+//         },
+//         {
+//           "name": "Metal Products",
+//           "value": 0.87
+//         },
+//         {
+//           "name": "Processed Minerals",
+//           "value": 0.57
+//         },
+//         {
+//           "name": "Inorganic Salts and Acids",
+//           "value": 0.45
+//         },
+//         {
+//           "name": "Mining",
+//           "value": 0.37
+//         }
+//       ]
+//     },
 
-    {
-      "name": "Vehicles",
-      "children": [
-        {
-          "name": "Aircraft",
-          "value": 0.55
-        },
-        {
-          "name": "Ships",
-          "value": 1.1
-        }
-      ]
-    },
+//     {
+//       "name": "Vehicles",
+//       "children": [
+//         {
+//           "name": "Aircraft",
+//           "value": 0.55
+//         },
+//         {
+//           "name": "Ships",
+//           "value": 1.1
+//         }
+//       ]
+//     },
 
-    {
-      "name": "Fabric",
-      "children": [
-        {
-          "name": "Textile Fabrics",
-          "value": 2.3
-        },
-        {
-          "name": "Leather",
-          "value": 0.43
-        },
-        {
-          "name": "Garments",
-          "value": 6
-        }
-      ]
-    },
+//     {
+//       "name": "Fabric",
+//       "children": [
+//         {
+//           "name": "Textile Fabrics",
+//           "value": 2.3
+//         },
+//         {
+//           "name": "Leather",
+//           "value": 0.43
+//         },
+//         {
+//           "name": "Garments",
+//           "value": 6
+//         }
+//       ]
+//     },
 
-    {
-      "name": "Food Products",
-      "children": [
-        {
-          "name": "Food Processing",
-          "value": 1.7
-        },
-        {
-          "name": "Fish and Seafood",
-          "value": 1.7
-        },
-        {
-          "name": "Meat and Eggs",
-          "value": 0.28
-        }
-      ]
-    },
+//     {
+//       "name": "Food Products",
+//       "children": [
+//         {
+//           "name": "Food Processing",
+//           "value": 1.7
+//         },
+//         {
+//           "name": "Fish and Seafood",
+//           "value": 1.7
+//         },
+//         {
+//           "name": "Meat and Eggs",
+//           "value": 0.28
+//         }
+//       ]
+//     },
 
-    {
-      "name": "Agriculture",
-      "children": [
-        {
-          "name": "Tropical Treecrops and Flowers",
-          "value": 17
-        },
-        {
-          "name": "Misc. Agriculture",
-          "value": 17
-        }
-      ]
-    },
+//     {
+//       "name": "Agriculture",
+//       "children": [
+//         {
+//           "name": "Tropical Treecrops and Flowers",
+//           "value": 17
+//         },
+//         {
+//           "name": "Misc. Agriculture",
+//           "value": 17
+//         }
+//       ]
+//     },
 
-    {
-      "name": "Construction",
-      "children": [
-        {
-          "name": "Construction Materials and Equipment",
-          "value": 6.8
-        },
-        {
-          "name": "Machinery",
-          "value": 5.1
-        }
-      ]
-    },
+//     {
+//       "name": "Construction",
+//       "children": [
+//         {
+//           "name": "Construction Materials and Equipment",
+//           "value": 6.8
+//         },
+//         {
+//           "name": "Machinery",
+//           "value": 5.1
+//         }
+//       ]
+//     },
 
-    {
-      "name": "Chemicals",
-      "children": [
-        {
-          "name": "Other Chemicals",
-          "value": 2.7
-        },
-        {
-          "name": "Chemicals and Health Related Products",
-          "value": 10
-        }
-      ]
-    },
+//     {
+//       "name": "Chemicals",
+//       "children": [
+//         {
+//           "name": "Other Chemicals",
+//           "value": 2.7
+//         },
+//         {
+//           "name": "Chemicals and Health Related Products",
+//           "value": 10
+//         }
+//       ]
+//     },
 
+//     {
+//       "name": "Other",
+//       "children": [
+//         {
+//           "name": "Other",
+//           "value": 2.64
+//         },
+//         {
+//           "name": "Not Classified",
+//           "value": 2.7
+//         }
+//       ]
+//     }
+//   ] 
+// }
+    
+var treemapDataset = {
+  "name": "",
+  "children": [
+    {
+      "name": "Tropical Fruit and Nuts",
+      "value": 17
+    },
+    {
+      "name": "Electronics",
+      "value": 17
+    },
+    {
+      "name": "Oil",
+      "value": 16
+    },
+    {
+      "name": "Health Related Products",
+      "value": 10
+    },
+    {
+      "name": "Construction Materials",
+      "value": 6.8
+    },
+    {
+      "name": "Garments",
+      "value": 6
+    },
+    {
+      "name": "Machinery",
+      "value": 5.1
+    },
+    {
+      "name": "Misc. Agriculture",
+      "value": 17
+    },
+    {
+      "name": "Not Classified",
+      "value": 2.7
+    },
+    {
+      "name": "Other Chemicals",
+      "value": 2.7
+    },
+    {
+      "name": "Textile Fabrics",
+      "value": 2.3
+    },
+    {
+      "name": "Fish",
+      "value": 1.7
+    },
+    {
+      "name": "Food Processing",
+      "value": 1.7
+    },
+    {
+      "name": "Ships",
+      "value": 1.1
+    },
+    {
+      "name": "Metals",
+      "value": 0.87
+    },
+    {
+      "name": "Paper",
+      "value": 0.74
+    },
+    {
+      "name": "Minerals",
+      "value": 0.57
+    },
+    {
+      "name": "Aircraft",
+      "value": 0.55
+    },
+    {
+      "name": "Salts",
+      "value": 0.45
+    },
+    {
+      "name": "Leather",
+      "value": 0.43
+    },
+    {
+      "name": "Mining",
+      "value": 0.37
+    },
+    {
+      "name": "Poultry",
+      "value": 0.28
+    },
     {
       "name": "Other",
-      "children": [
-        {
-          "name": "Other",
-          "value": 2.64
-        },
-        {
-          "name": "Not Classified",
-          "value": 2.7
-        }
-      ]
-    }
-  ] 
+      "value": 2.64
+    },
+  ]
 }
-    
 
 var line = d3.line()
           // D3 expects date formats to have months and days in order to scale correctly,
@@ -462,9 +559,7 @@ root.sum(function(d) {
   return d.value;
 })
 
-treemapLayout.size([600, 400])
-
-treemapLayout.tile(d3.treemapSquarify.ratio(1))
+treemapLayout.size([1200, 650])
 
 treemapLayout(root);
 
@@ -475,16 +570,16 @@ var nodes = d3.select('#treemap g')
       .append('g')
       .attr('transform', function(d) {return 'translate(' + [d.x0, d.y0 ] + ')'})
 nodes  
-      // .attr('x', function(d) { return d.x0 })
-      // .attr('y', function(d) { return d.y0 })
-      .append('rect')
-      .attr('width', function(d) { return d.x1 - d.x0 })
-      .attr('height', function(d) {return d.y1 - d.y0 })
-
+    .append('rect')
+    .attr('width', function(d) { return d.x1 - d.x0 })
+    .attr('height', function(d) {return d.y1 - d.y0 })
 
 nodes.append('text')
       .attr('dx', 4)
       .attr('dy', 14)
-      .text('ree normies')
+      .attr('class', 'treemapText')
+      .text(function(d){
+        return d.data.name;
+      })
 
 
