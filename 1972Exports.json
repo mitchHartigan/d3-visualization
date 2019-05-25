@@ -1,0 +1,146 @@
+{
+  "name": "exports",
+  "children" :  [
+    {
+      "name" :"Electronics",
+      "children" : [
+        {
+          "name": "Electronics",
+          "value": 17
+        }
+      ]
+    },
+
+    {
+      "name": "Materials",
+      "children": [
+        {
+          "name": "Oil",
+          "value": 16
+        },
+        {
+          "name": "Metal Products",
+          "value": 0.87
+        },
+        {
+          "name": "Processed Minerals",
+          "value": 0.57
+        },
+        {
+          "name": "Inorganic Salts and Acids",
+          "value": 0.45
+        },
+        {
+          "name": "Mining",
+          "value": 0.37
+        }
+      ]
+    },
+
+    {
+      "name": "Vehicles",
+      "children": [
+        {
+          "name": "Aircraft",
+          "value": 0.55
+        },
+        {
+          "name": "Ships",
+          "value": 1.1
+        }
+      ]
+    },
+
+    {
+      "name": "Fabric",
+      "children": [
+        {
+          "name": "Textile Fabrics",
+          "value": 2.3
+        },
+        {
+          "name": "Leather",
+          "value": 0.43
+        },
+        {
+          "name": "Garments",
+          "value": 6
+        }
+      ]
+    },
+
+    {
+      "name": "Food Products",
+      "children": [
+        {
+          "name": "Food Processing",
+          "value": 1.7
+        },
+        {
+          "name": "Fish and Seafood",
+          "value": 1.7
+        },
+        {
+          "name": "Meat and Eggs",
+          "value": 0.28
+        }
+      ]
+    },
+
+    {
+      "name": "Agriculture",
+      "children": [
+        {
+          "name": "Tropical Treecrops and Flowers",
+          "value": 17
+        },
+        {
+          "name": "Misc. Agriculture",
+          "value": 17
+        }
+      ]
+    },
+
+    {
+      "name": "Construction",
+      "children": [
+        {
+          "name": "Construction Materials and Equipment",
+          "value": 6.8
+        },
+        {
+          "name": "Machinery",
+          "value": 5.1
+        }
+      ]
+    },
+
+    {
+      "name": "Chemicals",
+      "children": [
+        {
+          "name": "Other Chemicals",
+          "value": 2.7
+        },
+        {
+          "name": "Chemicals and Health Related Products",
+          "value": 10
+        }
+      ]
+    },
+
+    {
+      "name": "Other",
+      "children": [
+        {
+          "name": "Other",
+          "value": 2.64
+        },
+        {
+          "name": "Not Classified",
+          "value": 2.7
+        }
+      ]
+    }
+  ] 
+}
