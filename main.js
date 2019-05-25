@@ -1,6 +1,5 @@
 console.log('main.js loaded!');
 
-console.log(dataset);
 
 var margin = {top: 50, right: 50, bottom: 50, left: 50}
   , width = window.innerWidth - margin.left - margin.right - 400 // Use the window's width 
@@ -13,6 +12,10 @@ const xScale = d3.scaleTime()
 const yScale = d3.scaleLinear()
                 .domain([0, 25])
                 .range([height, 0])
+
+const colorScale = d3.scaleLinear()
+                .range([ '#bae4ff', '#1083ce'])
+                .domain([5, 45])
 
 var line = d3.line()
           // D3 expects date formats to have months and days in order to scale correctly,
@@ -61,6 +64,38 @@ svg.append('path')
     .datum(dataset2)
     .attr('class', 'financeArea')
     .attr('d', area)
+
+svg.append('text')
+    .attr('class', 'agricultureGraphHeader')
+    .attr('x', '180')
+    .attr('y', '75')
+    .attr('id', 'agricultureGraphHeader')
+    .classed('hidden', true)
+    .text('Agriculture')
+
+svg.append('text')
+    .attr('class', 'agricultureGraphSubtext')
+    .attr('x', '225')
+    .attr('y', '95')
+    .attr('id', 'agricultureGraphSubtext')
+    .classed('hidden', true)
+    .text('raw materials exports')
+
+svg.append('text')
+    .attr('class', 'financeGraphHeader')
+    .attr('x', '650')
+    .attr('y', '75')
+    .attr('id', 'financeGraphHeader')
+    .classed('hidden', true)
+    .text('Finance')
+
+svg.append('text')
+    .attr('class', 'financeGraphSubtext')
+    .attr('x', '680')
+    .attr('y', '93')
+    .attr('id', 'financeGraphSubtext')
+    .classed('hidden', true)
+    .text('services sector exports')
     
 
 svg.append('rect')
@@ -68,9 +103,14 @@ svg.append('rect')
     .attr('width', width)
     .attr('height', height)
     .on('mousemove', function(){ 
-      console.log('entire graph moused over!');
       var mousePosX = d3.mouse(this)[0];
-      // console.log(mousePosX);
+       if (mousePosX <= 518 ) { // 518 is the middle pixel of the graph
+        $('#agricultureGraphHeader').fadeIn(400)
+        $('#agricultureGraphSubtext').fadeIn(400)
+       } else {
+        $('#financeGraphHeader').fadeIn(400)
+        $('#financeGraphSubtext').fadeIn(400)
+       }
     })
 
 // ---------------------------------------------------------
@@ -99,6 +139,9 @@ svg.append('rect')
       .append('rect')
       .attr('width', function(d) { return d.x1 - d.x0 })
       .attr('height', function(d) {return d.y1 - d.y0 })
+      .style('fill', function(d) {
+        return colorScale(d.value);
+      })
 
   nodes.append('text')
         .attr('dx', 4)
@@ -107,6 +150,7 @@ svg.append('rect')
         .text(function(d) {
           return d.data.name;
         })
+        .style('fill', 'white')
 
 // ---------------------------------------------------------
 // Renders 1994 Tree Map to the page, hidden by default.
@@ -134,6 +178,9 @@ svg.append('rect')
       .append('rect')
       .attr('width', function(d) { return d.x1 - d.x0 })
       .attr('height', function(d) {return d.y1 - d.y0 })
+      .style('fill', function(d) {
+        return colorScale(d.value);
+      })
 
   nodes.append('text')
         .attr('dx', 4)
@@ -142,6 +189,7 @@ svg.append('rect')
         .text(function(d) {
           return d.data.name;
         })
+        .style('fill', 'white')
 
 
 // ---------------------------------------------------------
@@ -170,6 +218,9 @@ svg.append('rect')
       .append('rect')
       .attr('width', function(d) { return d.x1 - d.x0 })
       .attr('height', function(d) {return d.y1 - d.y0 })
+      .style('fill', function(d) {
+        return colorScale(d.value);
+      })
 
   nodes.append('text')
         .attr('dx', 4)
@@ -178,6 +229,7 @@ svg.append('rect')
         .text(function(d) {
           return d.data.name;
         })
+        .style('fill', 'white')
 
 // ---------------------------------------------------------
 // Handlers responsible for displaying different data on the page,
@@ -190,10 +242,25 @@ function render1972() {
 
   document.getElementById('treemap1972Parent').style.display = 'block';
 
-  document.getElementById('singaporeAgImg').src = 'images/singapore1972.png';
-  document.getElementById('malaysiaAgImg').src = 'images/malaysia1972.png';
-  document.getElementById('thailandAgImg').src = 'images/thailand1972.png';
-  document.getElementById('indonesiaAgImg').src = 'images/indonesia1972.png';
+  $('#singaporeAgImg').fadeOut(200, function(){
+    document.getElementById('singaporeAgImg').src = 'images/singapore1972.png';
+    $('#singaporeAgImg').fadeIn(400)
+  })
+
+  $('#malaysiaAgImg').fadeOut(200, function(){
+    document.getElementById('malaysiaAgImg').src = 'images/malaysia1972.png';
+    $('#malaysiaAgImg').fadeIn(400)
+  })
+
+  $('#thailandAgImg').fadeOut(200, function(){
+    document.getElementById('thailandAgImg').src = 'images/thailand1972.png';
+    $('#thailandAgImg').fadeIn(400)
+  })
+
+  $('#indonesiaAgImg').fadeOut(200, function(){
+    document.getElementById('indonesiaAgImg').src = 'images/indonesia1972.png';
+    $('#indonesiaAgImg').fadeIn(400)
+  })
 
 }
 
@@ -205,16 +272,23 @@ function render1994() {
 
   $('#singaporeAgImg').fadeOut(200, function(){
     document.getElementById('singaporeAgImg').src = 'images/singapore1994.png';
-    $('#singaporeAgImg').fadeIn(200)
+    $('#singaporeAgImg').fadeIn(400)
   })
 
   $('#malaysiaAgImg').fadeOut(200, function(){
     document.getElementById('malaysiaAgImg').src = 'images/malaysia1994.png';
-    $('#malaysiaAgImg').fadeIn(200)
+    $('#malaysiaAgImg').fadeIn(400)
   })
 
-  document.getElementById('thailandAgImg').src = 'images/thailand1994.png';
-  document.getElementById('indonesiaAgImg').src = 'images/indonesia1994.png';
+  $('#thailandAgImg').fadeOut(200, function(){
+    document.getElementById('thailandAgImg').src = 'images/thailand1994.png';
+    $('#thailandAgImg').fadeIn(400)
+  })
+
+  $('#indonesiaAgImg').fadeOut(200, function(){
+    document.getElementById('indonesiaAgImg').src = 'images/indonesia1994.png';
+    $('#indonesiaAgImg').fadeIn(400)
+  })
 
 }
 
@@ -224,10 +298,23 @@ function render2016() {
 
   document.getElementById('treemap2016Parent').style.display = 'block';
 
-  document.getElementById('singaporeAgImg').src = 'images/singapore2016.png';
-  document.getElementById('malaysiaAgImg').src = 'images/malaysia2016.png';
-  document.getElementById('thailandAgImg').src = 'images/thailand2016.png';
-  document.getElementById('indonesiaAgImg').src = 'images/indonesia2016.png';
+  $('#singaporeAgImg').fadeOut(200, function(){
+    document.getElementById('singaporeAgImg').src = 'images/singapore2016.png';
+    $('#singaporeAgImg').fadeIn(400)
+  })
+
+  $('#malaysiaAgImg').fadeOut(200, function(){
+    document.getElementById('malaysiaAgImg').src = 'images/malaysia2016.png';
+    $('#malaysiaAgImg').fadeIn(400)
+  })
+
+  $('#thailandAgImg').fadeOut(200, function(){
+    document.getElementById('thailandAgImg').src = 'images/thailand2016.png';
+    $('#thailandAgImg').fadeIn(400)
+  })
+
+  $('#indonesiaAgImg').fadeOut(200, function(){
+    document.getElementById('indonesiaAgImg').src = 'images/indonesia2016.png';
+    $('#indonesiaAgImg').fadeIn(400)
+  })
 }
-
-

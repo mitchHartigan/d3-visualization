@@ -22,6 +22,34 @@
   opacity: 0.5;
 }
 
+.agricultureGraphHeader {
+  font-family: 'Open Sans';
+  fill: #ed980f;
+  font-size: 28pt;
+}
+
+.agricultureGraphSubtext {
+  font-family: 'Open Sans';
+  fill: white;
+  font-size: 12pt;
+}
+
+.financeGraphHeader {
+  font-family: 'Open Sans';
+  fill: #139ff9;
+  font-size: 28pt;
+}
+
+.financeGraphSubtext {
+  font-family: 'Open Sans';
+  fill: white;
+  font-size: 12pt;
+}
+
+.hidden {
+  display: none;
+}
+
 .financeLine {
   fill: none;
   stroke: #139ff9;

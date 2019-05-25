@@ -349,7 +349,7 @@ var treemap1994Data =
       "value": 3
     },
     {
-      "name": "Construction Materials and Equipment",
+      "name": "Construction Materials",
       "value": 2.1
     },
     {
@@ -373,19 +373,15 @@ var treemap1994Data =
       "value": 1.2
     },
     {
-      "name": "Food Processing",
+      "name": "Fabrics",
       "value": 1.2
     },
     {
-      "name": "Tropical Treecrops and Flowers",
+      "name": "Fruit",
       "value": 0.92
     },
     {
-      "name": "Home and Office Products",
-      "value": 0.69
-    },
-    {
-      "name": "Petrochemicals",
+      "name": "Oil",
       "value": 0.68
     },
     {
@@ -393,15 +389,15 @@ var treemap1994Data =
       "value": 0.62
     },
     {
-      "name": "Metal Products",
+      "name": "Metals",
       "value": 0.27
     },
     {
-      "name": "Fish and Seafood",
+      "name": "Fish",
       "value": 0.43
     },
     {
-      "name": "Misc Agriculture",
+      "name": "Agriculture",
       "value": 0.48
     },
     {
@@ -411,88 +407,88 @@ var treemap1994Data =
   ]
   }
 
-  var treemap2016Data = 
-  {
-    "name":"",
-      "children":[
+var treemap2016Data = 
+{
+  "name":"",
+    "children":[
+    {
+        "name": "Electronics",
+        "value": 41
+      },
       {
-          "name": "Electronics",
-          "value": 41
-        },
-        {
-          "name": "Chemicals and Health Related Products",
-          "value": 15
-        },
-        {
-          "name": "Machinery",
-          "value": 13
-        },
-        {
-          "name": "Not Classified",
-          "value": 7.3
-        },
-        {
-          "name": "Aircraft",
-          "value": 4.7
-        },
-        {
-          "name": "Other Chemicals",
-          "value": 4
-        },
-        {
-          "name": "Mining",
-          "value": 2.6
-        },
-        {
-          "name": "Petrochemicals",
-          "value": 1.4
-        },
-        {
-          "name": "Food Processing",
-          "value": 1.3
-        },
-        {
-          "name": "Garments",
-          "value": 1.2
-        },
-        {
-          "name": "Construction Materials and Equipment",
-          "value": 1.2
-        },
-        {
-          "name": "Precious Stones",
-          "value": 0.76
-        },
-        {
-          "name": "Misc Agriculture",
-          "value": 0.6
-        },
-        {
-          "name": "Tobacco",
-          "value": 0.44
-        },
-        {
-          "name": "Metal Products",
-          "value": 0.43
-        },
-        {
-          "name": "Processed Minerals",
-          "value": 0.41
-        },
-        {
-          "name": "Oil",
-          "value": 0.32
-        },
-        {
-          "name": "Ships",
-          "value": 0.23
-        },
-        {
-          "name": "OTHER",
-          "value": 4.11
-        }
-      ]
-    }
+        "name": "Chemicals and Health Related Products",
+        "value": 15
+      },
+      {
+        "name": "Machinery",
+        "value": 13
+      },
+      {
+        "name": "Not Classified",
+        "value": 7.3
+      },
+      {
+        "name": "Aircraft",
+        "value": 4.7
+      },
+      {
+        "name": "Other Chemicals",
+        "value": 4
+      },
+      {
+        "name": "Mining",
+        "value": 2.6
+      },
+      {
+        "name": "Oil",
+        "value": 1.4
+      },
+      {
+        "name": "Food Processing",
+        "value": 1.3
+      },
+      {
+        "name": "Garments",
+        "value": 1.2
+      },
+      {
+        "name": "Construction",
+        "value": 1.2
+      },
+      {
+        "name": "Jewels",
+        "value": 0.76
+      },
+      {
+        "name": "Agriculture",
+        "value": 0.6
+      },
+      {
+        "name": "Tobacco",
+        "value": 0.44
+      },
+      {
+        "name": "Metals",
+        "value": 0.43
+      },
+      {
+        "name": "Minerals",
+        "value": 0.41
+      },
+      {
+        "name": "Petroleum",
+        "value": 0.32
+      },
+      {
+        "name": "Ships",
+        "value": 0.23
+      },
+      {
+        "name": "Other",
+        "value": 4.11
+      }
+    ]
+  }
 
 
 
