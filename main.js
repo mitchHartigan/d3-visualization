@@ -1,5 +1,7 @@
 console.log('main.js loaded!');
 
+console.log(dataset);
+
 var margin = {top: 50, right: 50, bottom: 50, left: 50}
   , width = window.innerWidth - margin.left - margin.right - 400 // Use the window's width 
   , height = window.innerHeight - margin.top - margin.bottom - 200; // Use the window's height
@@ -11,484 +13,6 @@ const xScale = d3.scaleTime()
 const yScale = d3.scaleLinear()
                 .domain([0, 25])
                 .range([height, 0])
-
-var dataset = [
-  {"year": "1972", "value": "17.51631242"},
-  {"year": "1973", "value": "23.10887431"},
-  {"year": "1974", "value": "17.07783997"},
-  {"year": "1975", "value": "12.48471656"},
-  {"year": "1976", "value": "15.238667"},
-  {"year": "1977", "value": "14.10591289"},
-  {"year": "1978", "value": "13.73836379"},
-  {"year": "1979", "value": "13.18206582"},
-  {"year": "1980", "value": "10.27993161"},
-  {"year": "1981", "value": "7.374270702"},
-  {"year": "1982", "value": "5.582108785"},
-  {"year": "1983", "value": "6.183330754"},
-  {"year": "1984", "value": "5.699547497"},
-  {"year": "1985", "value": "4.425608489"},
-  {"year": "1986", "value": "4.345478061"},
-  {"year": "1987", "value": "4.358879436"},
-  {"year": "1988", "value": "4.465175103"},
-  {"year": "1989", "value": "3.651240518"},
-  {"year": "1990", "value": "2.558771073"},
-  {"year": "1991", "value": "2.02399843"},
-  {"year": "1992", "value": "1.779235602"},
-  {"year": "1993", "value": "1.350218592"},
-  {"year": "1994", "value": "1.125411061"},
-  {"year": "1995", "value": "1.082677605"},
-  {"year": "1996", "value": "0.842661464"},
-  {"year": "1997", "value": "0.685997884"},
-  {"year": "1998", "value": "0.687222714"},
-  {"year": "1999", "value": "0.563958108"},
-  {"year": "2000", "value": "0.459300851"},
-  {"year": "2001", "value": "0.433972079"},
-  {"year": "2002", "value": "0.404116124"},
-  {"year": "2003", "value": "0.351871122"},
-  {"year": "2004", "value": "0.346835"},
-  {"year": "2005", "value": "0.324119173"},
-  {"year": "2006", "value": "0.318213488"},
-  {"year": "2007", "value": "0.285273542"},
-  {"year": "2008", "value": "0.284420497"},
-  {"year": "2009", "value": "0.230458916"},
-  {"year": "2010", "value": "0.288912111"},
-  {"year": "2011", "value": "0.316070678"},
-  {"year": "2012", "value": "0.254432401"},
-  {"year": "2013", "value": "0.297910135"},
-  {"year": "2014", "value": "0.323922867"},
-  {"year": "2015", "value": "0.438846487"},
-  {"year": "2016", "value": "0.558206467"},
-]
-
-
-var dataset2 = [
-  {
-    "year": 1972,
-    "value": 0.436161776
-  },
-  {
-    "year": 1973,
-    "value": 0.534927627
-  },
-  {
-    "year": 1974,
-    "value": 0.556173526
-  },
-  {
-    "year": 1975,
-    "value": 0.43258832
-  },
-  {
-    "year": 1976,
-    "value": 0.609331476
-  },
-  {
-    "year": 1977,
-    "value": 0.770712909
-  },
-  {
-    "year": 1978,
-    "value": 0.941915228
-  },
-  {
-    "year": 1979,
-    "value": 1.154345006
-  },
-  {
-    "year": 1980,
-    "value": 1.124914409
-  },
-  {
-    "year": 1981,
-    "value": 0.908422951
-  },
-  {
-    "year": 1982,
-    "value": 0.83862326
-  },
-  {
-    "year": 1983,
-    "value": 0.875152999
-  },
-  {
-    "year": 1984,
-    "value": 1.140153572
-  },
-  {
-    "year": 1985,
-    "value": 1.038062284
-  },
-  {
-    "year": 1986,
-    "value": 1.713562457
-  },
-  {
-    "year": 1987,
-    "value": 1.764725469
-  },
-  {
-    "year": 1988,
-    "value": 1.317628269
-  },
-  {
-    "year": 1989,
-    "value": 0.998751561
-  },
-  {
-    "year": 1990,
-    "value": 0.695348151
-  },
-  {
-    "year": 1991,
-    "value": 0.832254719
-  },
-  {
-    "year": 1992,
-    "value": 1.042329878
-  },
-  {
-    "year": 1993,
-    "value": 1.415278991
-  },
-  {
-    "year": 1994,
-    "value": 1.43784694
-  },
-  {
-    "year": 1995,
-    "value": 15.61790061
-  },
-  {
-    "year": 1996,
-    "value": 15.70723511
-  },
-  {
-    "year": 1997,
-    "value": 18.180721
-  },
-  {
-    "year": 1998,
-    "value": 13.85654266
-  },
-  {
-    "year": 1999,
-    "value": 12.18477887
-  },
-  {
-    "year": 2000,
-    "value": 9.304152285
-  },
-  {
-    "year": 2001,
-    "value": 11.19944575
-  },
-  {
-    "year": 2002,
-    "value": 12.13838318
-  },
-  {
-    "year": 2003,
-    "value": 14.82750975
-  },
-  {
-    "year": 2004,
-    "value": 12.85390955
-  },
-  {
-    "year": 2005,
-    "value": 12.96505381
-  },
-  {
-    "year": 2006,
-    "value": 14.05793253
-  },
-  {
-    "year": 2007,
-    "value": 16.44257688
-  },
-  {
-    "year": 2008,
-    "value": 14.67154398
-  },
-  {
-    "year": 2009,
-    "value": 16.38607738
-  },
-  {
-    "year": 2010,
-    "value": 15.65987695
-  },
-  {
-    "year": 2011,
-    "value": 15.91876875
-  },
-  {
-    "year": 2012,
-    "value": 15.56876399
-  },
-  {
-    "year": 2013,
-    "value": 16.06750506
-  },
-  {
-    "year": 2014,
-    "value": 16.70608815
-  },
-  {
-    "year": 2015,
-    "value": 17.59193375
-  },
-  {
-    "year": 2016,
-    "value": 17.57406754
-  }
-]
-
-// var treemapDataset = 
-// {
-//   "name": "exports",
-//   "children" :  [
-//     {
-//       "name" :"Electronics",
-//       "children" : [
-//         {
-//           "name": "Electronics",
-//           "value": 17
-//         }
-//       ]
-//     },
-
-//     {
-//       "name": "Materials",
-//       "children": [
-//         {
-//           "name": "Oil",
-//           "value": 16
-//         },
-//         {
-//           "name": "Metal Products",
-//           "value": 0.87
-//         },
-//         {
-//           "name": "Processed Minerals",
-//           "value": 0.57
-//         },
-//         {
-//           "name": "Inorganic Salts and Acids",
-//           "value": 0.45
-//         },
-//         {
-//           "name": "Mining",
-//           "value": 0.37
-//         }
-//       ]
-//     },
-
-//     {
-//       "name": "Vehicles",
-//       "children": [
-//         {
-//           "name": "Aircraft",
-//           "value": 0.55
-//         },
-//         {
-//           "name": "Ships",
-//           "value": 1.1
-//         }
-//       ]
-//     },
-
-//     {
-//       "name": "Fabric",
-//       "children": [
-//         {
-//           "name": "Textile Fabrics",
-//           "value": 2.3
-//         },
-//         {
-//           "name": "Leather",
-//           "value": 0.43
-//         },
-//         {
-//           "name": "Garments",
-//           "value": 6
-//         }
-//       ]
-//     },
-
-//     {
-//       "name": "Food Products",
-//       "children": [
-//         {
-//           "name": "Food Processing",
-//           "value": 1.7
-//         },
-//         {
-//           "name": "Fish and Seafood",
-//           "value": 1.7
-//         },
-//         {
-//           "name": "Meat and Eggs",
-//           "value": 0.28
-//         }
-//       ]
-//     },
-
-//     {
-//       "name": "Agriculture",
-//       "children": [
-//         {
-//           "name": "Tropical Treecrops and Flowers",
-//           "value": 17
-//         },
-//         {
-//           "name": "Misc. Agriculture",
-//           "value": 17
-//         }
-//       ]
-//     },
-
-//     {
-//       "name": "Construction",
-//       "children": [
-//         {
-//           "name": "Construction Materials and Equipment",
-//           "value": 6.8
-//         },
-//         {
-//           "name": "Machinery",
-//           "value": 5.1
-//         }
-//       ]
-//     },
-
-//     {
-//       "name": "Chemicals",
-//       "children": [
-//         {
-//           "name": "Other Chemicals",
-//           "value": 2.7
-//         },
-//         {
-//           "name": "Chemicals and Health Related Products",
-//           "value": 10
-//         }
-//       ]
-//     },
-
-//     {
-//       "name": "Other",
-//       "children": [
-//         {
-//           "name": "Other",
-//           "value": 2.64
-//         },
-//         {
-//           "name": "Not Classified",
-//           "value": 2.7
-//         }
-//       ]
-//     }
-//   ] 
-// }
-    
-var treemapDataset = {
-  "name": "",
-  "children": [
-    {
-      "name": "Tropical Fruit and Nuts",
-      "value": 17
-    },
-    {
-      "name": "Electronics",
-      "value": 17
-    },
-    {
-      "name": "Oil",
-      "value": 16
-    },
-    {
-      "name": "Health Related Products",
-      "value": 10
-    },
-    {
-      "name": "Construction Materials",
-      "value": 6.8
-    },
-    {
-      "name": "Garments",
-      "value": 6
-    },
-    {
-      "name": "Machinery",
-      "value": 5.1
-    },
-    {
-      "name": "Misc. Agriculture",
-      "value": 17
-    },
-    {
-      "name": "Not Classified",
-      "value": 2.7
-    },
-    {
-      "name": "Other Chemicals",
-      "value": 2.7
-    },
-    {
-      "name": "Textile Fabrics",
-      "value": 2.3
-    },
-    {
-      "name": "Fish",
-      "value": 1.7
-    },
-    {
-      "name": "Food Processing",
-      "value": 1.7
-    },
-    {
-      "name": "Ships",
-      "value": 1.1
-    },
-    {
-      "name": "Metals",
-      "value": 0.87
-    },
-    {
-      "name": "Paper",
-      "value": 0.74
-    },
-    {
-      "name": "Minerals",
-      "value": 0.57
-    },
-    {
-      "name": "Aircraft",
-      "value": 0.55
-    },
-    {
-      "name": "Salts",
-      "value": 0.45
-    },
-    {
-      "name": "Leather",
-      "value": 0.43
-    },
-    {
-      "name": "Mining",
-      "value": 0.37
-    },
-    {
-      "name": "Poultry",
-      "value": 0.28
-    },
-    {
-      "name": "Other",
-      "value": 2.64
-    },
-  ]
-}
 
 var line = d3.line()
           // D3 expects date formats to have months and days in order to scale correctly,
@@ -546,40 +70,164 @@ svg.append('rect')
     .on('mousemove', function(){ 
       console.log('entire graph moused over!');
       var mousePosX = d3.mouse(this)[0];
-      console.log(mousePosX);
+      // console.log(mousePosX);
     })
 
-// TREE MAP
+// ---------------------------------------------------------
+// Renders 1972 Tree Map to the page, displayed by default.
+// ---------------------------------------------------------
 
-var treemapLayout = d3.treemap();
+  var treemapLayout = d3.treemap();
 
-var root = d3.hierarchy(treemapDataset);
+  var root = d3.hierarchy(treemap1972Data);
 
-root.sum(function(d) {
-  return d.value;
-})
+  root.sum(function(d) {
+    return d.value;
+  })
 
-treemapLayout.size([1200, 650])
+  treemapLayout.size([1200, 650])
 
-treemapLayout(root);
+  treemapLayout(root);
 
-var nodes = d3.select('#treemap g')
-    .selectAll('g')
-    .data(root.descendants())
-    .enter()
-      .append('g')
-      .attr('transform', function(d) {return 'translate(' + [d.x0, d.y0 ] + ')'})
-nodes  
-    .append('rect')
-    .attr('width', function(d) { return d.x1 - d.x0 })
-    .attr('height', function(d) {return d.y1 - d.y0 })
+  var nodes = d3.select('#treemap1972 g')
+      .selectAll('g')
+      .data(root.descendants())
+      .enter()
+        .append('g')
+        .attr('transform', function(d) {return 'translate(' + [d.x0, d.y0 ] + ')'})
+  nodes  
+      .append('rect')
+      .attr('width', function(d) { return d.x1 - d.x0 })
+      .attr('height', function(d) {return d.y1 - d.y0 })
 
-nodes.append('text')
-      .attr('dx', 4)
-      .attr('dy', 14)
-      .attr('class', 'treemapText')
-      .text(function(d){
-        return d.data.name;
-      })
+  nodes.append('text')
+        .attr('dx', 4)
+        .attr('dy', 14)
+        .attr('class', 'treemapText')
+        .text(function(d) {
+          return d.data.name;
+        })
+
+// ---------------------------------------------------------
+// Renders 1994 Tree Map to the page, hidden by default.
+// ---------------------------------------------------------
+
+  var treemapLayout = d3.treemap();
+
+  var root = d3.hierarchy(treemap1994Data);
+
+  root.sum(function(d) {
+    return d.value;
+  })
+
+  treemapLayout.size([1200, 650])
+
+  treemapLayout(root);
+
+  var nodes = d3.select('#treemap1994 g')
+      .selectAll('g')
+      .data(root.descendants())
+      .enter()
+        .append('g')
+        .attr('transform', function(d) {return 'translate(' + [d.x0, d.y0 ] + ')'})
+  nodes  
+      .append('rect')
+      .attr('width', function(d) { return d.x1 - d.x0 })
+      .attr('height', function(d) {return d.y1 - d.y0 })
+
+  nodes.append('text')
+        .attr('dx', 4)
+        .attr('dy', 14)
+        .attr('class', 'treemapText')
+        .text(function(d) {
+          return d.data.name;
+        })
+
+
+// ---------------------------------------------------------
+// Renders 2016 Tree Map to the page, hidden by default.
+// ---------------------------------------------------------
+
+  var treemapLayout = d3.treemap();
+
+  var root = d3.hierarchy(treemap2016Data);
+
+  root.sum(function(d) {
+    return d.value;
+  })
+
+  treemapLayout.size([1200, 650])
+
+  treemapLayout(root);
+
+  var nodes = d3.select('#treemap2016 g')
+      .selectAll('g')
+      .data(root.descendants())
+      .enter()
+        .append('g')
+        .attr('transform', function(d) {return 'translate(' + [d.x0, d.y0 ] + ')'})
+  nodes  
+      .append('rect')
+      .attr('width', function(d) { return d.x1 - d.x0 })
+      .attr('height', function(d) {return d.y1 - d.y0 })
+
+  nodes.append('text')
+        .attr('dx', 4)
+        .attr('dy', 14)
+        .attr('class', 'treemapText')
+        .text(function(d) {
+          return d.data.name;
+        })
+
+// ---------------------------------------------------------
+// Handlers responsible for displaying different data on the page,
+// depending on the selected year.
+// ---------------------------------------------------------
+
+function render1972() {
+  document.getElementById('treemap1994Parent').style.display = 'none';
+  document.getElementById('treemap2016Parent').style.display = 'none';
+
+  document.getElementById('treemap1972Parent').style.display = 'block';
+
+  document.getElementById('singaporeAgImg').src = 'images/singapore1972.png';
+  document.getElementById('malaysiaAgImg').src = 'images/malaysia1972.png';
+  document.getElementById('thailandAgImg').src = 'images/thailand1972.png';
+  document.getElementById('indonesiaAgImg').src = 'images/indonesia1972.png';
+
+}
+
+function render1994() {
+  document.getElementById('treemap2016Parent').style.display = 'none';
+  document.getElementById('treemap1972Parent').style.display = 'none';
+
+  document.getElementById('treemap1994Parent').style.display = 'block';
+
+  $('#singaporeAgImg').fadeOut(200, function(){
+    document.getElementById('singaporeAgImg').src = 'images/singapore1994.png';
+    $('#singaporeAgImg').fadeIn(200)
+  })
+
+  $('#malaysiaAgImg').fadeOut(200, function(){
+    document.getElementById('malaysiaAgImg').src = 'images/malaysia1994.png';
+    $('#malaysiaAgImg').fadeIn(200)
+  })
+
+  document.getElementById('thailandAgImg').src = 'images/thailand1994.png';
+  document.getElementById('indonesiaAgImg').src = 'images/indonesia1994.png';
+
+}
+
+function render2016() {
+  document.getElementById('treemap1972Parent').style.display = 'none';
+  document.getElementById('treemap1994Parent').style.display = 'none';
+
+  document.getElementById('treemap2016Parent').style.display = 'block';
+
+  document.getElementById('singaporeAgImg').src = 'images/singapore2016.png';
+  document.getElementById('malaysiaAgImg').src = 'images/malaysia2016.png';
+  document.getElementById('thailandAgImg').src = 'images/thailand2016.png';
+  document.getElementById('indonesiaAgImg').src = 'images/indonesia2016.png';
+}
 
 

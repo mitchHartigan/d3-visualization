@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
   <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 </head>
 
 <body>
@@ -47,7 +48,7 @@
 
   <div class="centerParent">
     <div class="centerElem">
-      <img width="636" height="400" src="singapore1972.png" alt="An image of singapore."/>
+      <img id="singaporeAgImg" width="556" height="350" src="images/singapore1972.png" alt="An image of singapore."/>
     </div>
   </div>
 
@@ -57,28 +58,53 @@
     </div>
     <div class="centerParent">
         <div class="centerElem">
-            <img class="surroundingCountriesImg" width="159" height="100" src="singapore1972.png" alt="An image of singapore."/>
-            <h3>Malaysia</h3>
+            <img id="malaysiaAgImg" class="surroundingCountriesImg" width="318" height="200" src="images/malaysia1972.png" alt="An image of singapore."/>
         </div>
         <div class="centerElem">
-            <img class="surroundingCountriesImg" width="159" height="100" src="singapore1972.png" alt="An image of singapore."/>
-            <h3>Malaysia</h3>
+            <img id="thailandAgImg" class="surroundingCountriesImg" width="318" height="200" src="images/thailand1972.png" alt="An image of singapore."/>
         </div>
-        <div class="centeElem">
-            <img class="surroundingCountriesImg" width="159" height="100" src="singapore1972.png" alt="An image of singapore."/>
-            <h3>Malaysia</h3>
+        <div class="centerElem">
+            <img id="indonesiaAgImg" class="surroundingCountriesImg" width="318" height="200" src="images/indonesia1972.png" alt="An image of singapore."/>
         </div>
     </div>
   </div>
-  <div class="centerParent" style="margin-bottom: 70px; margin-top: 50px;">
+
+  <div class="centerParent">
+      <div class="centerElem">
+          <label class="input"><input type="radio" name="radio" onfocus="render1972()" checked>1972</label>
+          <label><input id="radio1994" type="radio" name="radio" onfocus="render1994()">1994</label>
+          <label><input type="radio" name="radio" onfocus="render2016()">2016<label>
+      </div>
+    </div>
+
+  <div id="treemap1972Parent" class="centerParent" style="margin-bottom: 70px; margin-top: 50px;">
     <div class="centerElem">
-      <svg id="treemap" width="1200" height="650">
+      <svg id="treemap1972" width="1200" height="650">
         <g>
         </g>
       </svg>
     </div>
   </div>
 
+  <div id="treemap1994Parent" class="centerParent" style="margin-bottom: 70px; margin-top: 50px; display: none;">
+      <div class="centerElem">
+        <svg id="treemap1994" width="1200" height="650">
+          <g>
+          </g>
+        </svg>
+      </div>
+    </div>
+
+  <div id="treemap2016Parent" class="centerParent" style="margin-bottom: 70px; margin-top: 50px; display: none;">
+      <div class="centerElem">
+        <svg id="treemap2016" width="1200" height="650">
+          <g>
+          </g>
+        </svg>
+      </div>
+    </div>
+
+  <script src="data.js"></script>
   <script src="main.js"></script>
 </body>
 
