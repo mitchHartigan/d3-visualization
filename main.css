@@ -66,17 +66,17 @@
 }
 
 .xAxis {
-  /* color of the line */
   color: white;
-  /* color of the number */
   stroke: white;
   font-family: 'Open Sans';
-  font-weight: 100;
+  font-size: 9pt;
 }
 
 .yAxis {
   color: white;
   stroke: white;
+  font-family: 'Open Sans';
+  font-size: 6pt;
 }
 
 .centerElem {
@@ -105,6 +105,41 @@
   padding-left: 10px;
   padding-right: 10px;
 }
+
+.footerTextTitle {
+  color: white;
+  font-family: 'Open Sans';
+  font-size: 18pt;
+}
+
+.footerTextData {
+  color: white;
+  font-family: 'Open Sans';
+  font-size: 14pt;
+}
+
+.yAxisLabel {
+  fill: white;
+  font-family: 'Open Sans';
+  font-size: 8pt;
+}
+
+.yearSelectElem {
+  display: flex;
+  background-color: #2F4050;
+  height: 60px;
+  width: 400px;
+  border-radius: 5px;
+}
+
+.graphStatsBox {
+  display:flex;
+  flex-wrap: nowrap;
+  background-color:#2F4050; 
+  border-radius: 7px;
+}
+
+/* ============================================= */
 
 #agriculturalLand {
   font-family: 'Open Sans';
@@ -148,33 +183,6 @@
   color: white;
   font-family: 'Open Sans';
   font-size: 14pt;
-}
-
-.footerTextTitle {
-  color: white;
-  font-family: 'Open Sans';
-  font-size: 18pt;
-}
-
-.footerTextData {
-  color: white;
-  font-family: 'Open Sans';
-  font-size: 14pt;
-}
-
-.yearSelectElem {
-  display: flex;
-  background-color: #2F4050;
-  height: 60px;
-  width: 400px;
-  border-radius: 5px;
-}
-
-.graphStatsBox {
-  display:flex;
-  flex-wrap: nowrap;
-  background-color:#2F4050; 
-  border-radius: 7px;
 }
 
 #totalGDPStat {
