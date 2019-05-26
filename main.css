@@ -171,22 +171,20 @@
 }
 
 .graphStatsBox {
-  height: 200px;
+  display:flex;
+  flex-wrap: nowrap;
   background-color:#2F4050; 
   border-radius: 7px;
 }
 
 #totalGDPStat {
-  margin-top: 90px;
-  margin-left: 20px;
-  padding-top: 10px;
   font-size: 16pt;
   margin-bottom: 0px;
-  text-align: center;
+  text-align: left;
 }
 
 #totalGDPAmt {
-  text-align: center;
+  text-align: left;
   font-size: 26pt;
   margin-top: 0px;
   margin-bottom: 20px;
@@ -194,15 +192,36 @@
 }
 
 #agricultureStat {
-  margin-top: 10px;
-  text-align: center;
   margin-bottom: 2px;
 }
 
 #agriculturePercentage {
-  text-align: center;
+  margin-top: 0px;
   font-size: 24pt;
-  margin-top: 2px;
+  color: #ed980f;
+}
+
+#topExportStat {
+  font-size: 16pt;
+  margin-bottom: 0px;
+  text-align: left;
+}
+
+#topExportVal {
+  text-align: left;
+  font-size: 26pt;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  color: #ed980f;
+}
+
+#financeStat {
+  margin-bottom: 2px;
+}
+
+#financePercentage {
+  margin-top: 0px;
+  font-size: 24pt;
   color: #ed980f;
 }
 

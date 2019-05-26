@@ -32,7 +32,7 @@ const svg = d3.select('h2').append('svg')
   .attr('width', width + margin.left + margin.right)
   .attr('height', height + margin.bottom + margin.top)
   .append('g')
-    .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')'); // these values, (50), are padding values
+    .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 
 svg.append('g')
     .attr('class', 'xAxis')
@@ -143,8 +143,11 @@ svg.append('rect')
 
          $('#hoverArea1972').fadeIn(400)
          document.getElementById('graphDescriptionYear').innerHTML = '1972';
+
          document.getElementById('totalGDPAmt').innerHTML = '$2.7B USD';
          document.getElementById('agriculturePercentage').innerHTML = '17.5%';
+         document.getElementById('topExportVal').innerHTML = 'Tropical Fruit';
+         document.getElementById('financePercentage').innerHTML = '0.4%';
          
 
          document.getElementById('graphDescriptionText1972').style.display = 'block';
@@ -160,11 +163,13 @@ svg.append('rect')
         document.getElementById('graphDescriptionYear').innerHTML = '1994';
         document.getElementById('totalGDPAmt').innerHTML = '$73.7B USD';
         document.getElementById('agriculturePercentage').innerHTML = '1.1%';
+        document.getElementById('topExportVal').innerHTML = 'Electronics';
+        document.getElementById('financePercentage').innerHTML = '1.4%';
 
         document.getElementById('graphDescriptionText1972').style.display = 'none';
         document.getElementById('graphDescriptionText1994').style.display = 'block';
         document.getElementById('graphDescriptionText2016').style.display = 'none';
-
+        
        } else if (mousePosX >= ((width/3)*2)){ 
         $('#hoverArea1994').fadeOut(400)
         $('#hoverArea1972').fadeOut(400)
@@ -173,10 +178,13 @@ svg.append('rect')
         document.getElementById('graphDescriptionYear').innerHTML = '2016';
         document.getElementById('totalGDPAmt').innerHTML = '$309.7B USD';
         document.getElementById('agriculturePercentage').innerHTML = '0.5%';
+        document.getElementById('topExportVal').innerHTML = 'Electronics';
+        document.getElementById('financePercentage').innerHTML = '17.5%';
 
         document.getElementById('graphDescriptionText1972').style.display = 'none';
         document.getElementById('graphDescriptionText1994').style.display = 'none';
         document.getElementById('graphDescriptionText2016').style.display = 'block';
+
        }
     })
 
