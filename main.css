@@ -22,6 +22,10 @@
   opacity: 0.5;
 }
 
+.graphDescriptionText {
+  height: 200px;
+}
+
 .agricultureGraphHeader {
   font-family: 'Open Sans';
   fill: #ed980f;
@@ -44,6 +48,11 @@
   font-family: 'Open Sans';
   fill: white;
   font-size: 12pt;
+}
+
+.hoverAreaRect {
+  fill: white;
+  opacity: 0.25;
 }
 
 .hidden {
@@ -133,19 +142,44 @@
   font-size: 10pt;
 }
 
-
-rect {
-  fill: steelblue;
-  opacity: 0.5;
-  stroke: white;
+.yearSelectElem {
+  display: flex;
+  background-color: #2F4050;
+  height: 60px;
+  width: 400px;
+  border-radius: 5px;
 }
 
-body {
+/* body {
   background-color: #112437;
   margin: 0px;
   padding: 0px;
+} */
+
+body {
+   background-image: linear-gradient(rgba(15,24,41,1), rgba(20,59, 82,1)); 
 }
 
 label {
   color: white;
+  cursor: pointer;
+  font-family: 'Open Sans';
+  font-size: 12pt;
+  font-weight: bold;
+  padding: 10px 20px 10px 20px;
+  margin: 10px 20px 10px 20px;
+  text-align: center;
+}
+
+input {
+  opacity: 0;
+  margin: 0px;
+  padding: 0px;
+}
+
+input[type="radio"]:checked + label {
+  background-color: #ed980f;
+  border-radius: 3px;
+  padding: 10px 20px 10px 20px;
+  text-align: center;
 }

@@ -18,7 +18,7 @@ const colorScale = d3.scaleLinear()
                 .domain([5, 45])
 
 var line = d3.line()
-          // D3 expects date formats to have months and days in order to scale correctly,
+          // d3 expects date formats to have months and days in order to scale correctly,
           // and we fake that all the data was recorded on the first day of the year by adding 
           // 0,0 after the year.
           .x(function(d) { return xScale(new Date(d.year, 0, 0)) })
@@ -53,7 +53,6 @@ svg.append('path')
     .datum(dataset2)
     .attr('class', 'financeLine')
     .attr('d', line)
-
 
 svg.append('path')
     .datum(dataset)
@@ -96,7 +95,33 @@ svg.append('text')
     .attr('id', 'financeGraphSubtext')
     .classed('hidden', true)
     .text('services sector exports')
-    
+
+svg.append('rect')
+   .attr('width', '60')
+   .attr('height', height)
+   .attr('x', '0')
+   .attr('y', '0')
+   .attr('class', 'hoverAreaRect')
+   .attr('id', 'hoverArea1972')
+   .classed('hidden', true)
+
+svg.append('rect')
+   .attr('width', '60')
+   .attr('height', height)
+   .attr('x', '482')
+   .attr('y', '0')
+   .attr('class', 'hoverAreaRect')
+   .attr('id', 'hoverArea1994')
+   .classed('hidden', true)
+
+svg.append('rect')
+   .attr('width', '60')
+   .attr('height', height)
+   .attr('x', width - 60)
+   .attr('y', '0')
+   .attr('class', 'hoverAreaRect')
+   .attr('id', 'hoverArea2016')
+   .classed('hidden', true)
 
 svg.append('rect')
     .attr('class', 'overlay')
@@ -104,12 +129,51 @@ svg.append('rect')
     .attr('height', height)
     .on('mousemove', function(){ 
       var mousePosX = d3.mouse(this)[0];
-       if (mousePosX <= 518 ) { // 518 is the middle pixel of the graph
+
+       if (mousePosX <= (width/2) ) { // 518 is the middle pixel of the graph
         $('#agricultureGraphHeader').fadeIn(400)
         $('#agricultureGraphSubtext').fadeIn(400)
-       } else {
+      } else {
         $('#financeGraphHeader').fadeIn(400)
         $('#financeGraphSubtext').fadeIn(400)
+       }
+
+       if (mousePosX <= (width/3)) {
+         $('#hoverArea1994').fadeOut(400)
+         $('#hoverArea2016').fadeOut(400)
+
+         $('#hoverArea1972').fadeIn(400)
+         document.getElementById('graphDescriptionYear').innerHTML = '1972';
+
+         document.getElementById('graphDescriptionText1972').style.display = 'block';
+         document.getElementById('graphDescriptionText1994').style.display = 'none';
+         document.getElementById('graphDescriptionText2016').style.display = 'none';
+
+
+       } else if (mousePosX <= ((width/3)*2)) {
+        $('#hoverArea1994').fadeIn(400)
+        $('#hoverArea2016').fadeOut(400)
+        $('#hoverArea1972').fadeOut(400)
+        
+   
+        document.getElementById('graphDescriptionYear').innerHTML = '1994';
+
+        document.getElementById('graphDescriptionText1972').style.display = 'none';
+        document.getElementById('graphDescriptionText1994').style.display = 'block';
+        document.getElementById('graphDescriptionText2016').style.display = 'none';
+
+
+       } else if (mousePosX >= ((width/3)*2)){ 
+        $('#hoverArea1994').fadeOut(400)
+        $('#hoverArea1972').fadeOut(400)
+        $('#hoverArea2016').fadeIn(400)
+
+        document.getElementById('graphDescriptionYear').innerHTML = '2016';
+
+        document.getElementById('graphDescriptionText1972').style.display = 'none';
+        document.getElementById('graphDescriptionText1994').style.display = 'none';
+        document.getElementById('graphDescriptionText2016').style.display = 'block';
+
        }
     })
 
@@ -190,7 +254,6 @@ svg.append('rect')
           return d.data.name;
         })
         .style('fill', 'white')
-
 
 // ---------------------------------------------------------
 // Renders 2016 Tree Map to the page, hidden by default.

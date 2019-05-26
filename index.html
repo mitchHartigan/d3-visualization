@@ -23,24 +23,53 @@
   </div>
 
   <div class="centerParent">
-    <div class="centerElem">
-        <h1 class="textElem">1972</h1>
-        <p class="textElem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate suis aute irure
-          dolor in reprehenderit</p>
+    <div class="centerElem graphDescriptionText">
+        <h1 id="graphDescriptionYear" class="textElem" >1972</h1>
+
+        <p id="graphDescriptionText1972" class="textElem">
+            Singapore gained independence in 1965, and 1972 marks a year where Singapore’s agricultural exports were
+            beginning their final peak before their rapid industrialisation, and agricultural descent. At this point
+            the finance sector of the nation was in its infancy, making up just 0.4% of the Singapore’s GDP.
+        </p>
+
+        <p id="graphDescriptionText1994" class="textElem" style="display: none;">
+            In 1994, Singapore took advantage of its location and timezone to birth a new exchange. During this period
+            Singapore’s banks were deregulated leading to massive growth in its financial sector. Shortly after this
+            growth, strict regulation was put in place, which can be seen in the sharp downturn on the graph. 
+            <br></br>
+            Rapid industrialisation saw the importance of services to the Singapore economy grow, as evidenced by the
+            increasing share of the financial and business sectors of the economy.
+        </p>
+
+        <p id="graphDescriptionText2016" class="textElem" style="display: none;">
+            In the present day, Singapore has a highly developed and successful free-market economy. It enjoys a remarkably
+            open and corruption-free environment, stable prices, and a per capita GDP higher than that of most developed countries.
+            Unemployment is very low. The economy depends heavily on exports, particularly of consumer electronics, information
+            technology products, and financial services. 
+            <br></br>
+            Singapore’s most significant advantage today is it’s ideal location as a place to manage wealth, especially for rich
+            Chinese businessmen and investors. Being within Asia, yet safe from strict Chinese government laws.
+        </p>
     </div>
+
     <div class="centerElem">
-      <p class="textElem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      <p class="textElem" id="graphDescriptionStats1972">1972 Text! ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-         consequat. Duis aute irure dolor in reprehenderit in voluptate</p>
+         consequat. Duis aute irure dolor in reprehenderit in voluptate
+      </p>
+
+      <p class="textElem" id="graphDescriptionText1994" style="display: none;">1994 text! ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate
+     </p>
+
     </div>
   </div>
 
   <div class="centerParent">
-    <div class="centerElem">
+    <div>
       <h1 id="agriculturalLand">Agricultural Land</h1>
       <h3 id="totalLandArea">% of total land area </h3>
     </div>
@@ -48,13 +77,13 @@
 
   <div class="centerParent">
     <div class="centerElem">
-      <img id="singaporeAgImg" width="556" height="350" src="images/singapore1972.png" alt="An image of singapore."/>
+      <img id="singaporeAgImg" width="438" height="275" src="images/singapore1972.png" alt="An image of singapore."/>
     </div>
   </div>
 
-  <div class="centerParent" style="margin-top: 60px;">
+  <div class="centerParent" style="margin-top: 40px;">
     <div>
-      <h2 style="font-family: Open Sans; color: white">Surrounding Countries</h2>
+      <h4 style="font-family: Open Sans; color: white"><i>Surrounding Countries</i></h4>
     </div>
     <div class="centerParent">
         <div class="centerElem">
@@ -70,11 +99,19 @@
   </div>
 
   <div class="centerParent">
-      <div class="centerElem">
-          <label class="input"><input type="radio" name="radio" onfocus="render1972()" checked>1972</label>
-          <label><input id="radio1994" type="radio" name="radio" onfocus="render1994()">1994</label>
-          <label><input type="radio" name="radio" onfocus="render2016()">2016<label>
+    <div class="centerElem">
+      <h2 style="color: white; font-family: 'Open Sans';">Select a year:</h2>
+    </div>
+  </div>
+
+  <div class="centerParent">
+    <div class="centerElem">
+      <div class="yearSelectElem">
+        <input id="radio1974" type="radio" name="radio" onfocus="render1972()" checked/><label for="radio1974">1972</label>
+        <input id="radio1994" type="radio" name="radio" onfocus="render1994()"/><label for="radio1994">1994</label>
+        <input id="radio2016" type="radio" name="radio" onfocus="render2016()"/><label for="radio2016">2016</label>
       </div>
+    </div>
     </div>
 
   <div id="treemap1972Parent" class="centerParent" style="margin-bottom: 70px; margin-top: 50px;">
