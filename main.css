@@ -123,23 +123,43 @@
 }
 
 #singaporeHeaderImgParent {
-  width: 80%;
+  width: 100%;
   text-align: center;
-  height: 700px;
+  height: 800px;
 }
 
 #singaporeHeaderImg {
-  background-image: url('singapore.svg');
+  background-image: url('images/singaporeHeader.png');
   height: 100%;
+  width: 100%;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  margin-top: -110px;
 }
 
 .treemapText {
   color: white;
   font-family: 'Open Sans';
   font-size: 10pt;
+}
+
+#treemapTitle {
+  text-align: center;
+  color: white;
+  font-family: 'Open Sans';
+  font-size: 14pt;
+}
+
+.footerTextTitle {
+  color: white;
+  font-family: 'Open Sans';
+  font-size: 18pt;
+}
+
+.footerTextData {
+  color: white;
+  font-family: 'Open Sans';
+  font-size: 14pt;
 }
 
 .yearSelectElem {
@@ -150,14 +170,46 @@
   border-radius: 5px;
 }
 
-/* body {
-  background-color: #112437;
-  margin: 0px;
-  padding: 0px;
-} */
+.graphStatsBox {
+  height: 200px;
+  background-color:#2F4050; 
+  border-radius: 7px;
+}
+
+#totalGDPStat {
+  margin-top: 90px;
+  margin-left: 20px;
+  padding-top: 10px;
+  font-size: 16pt;
+  margin-bottom: 0px;
+  text-align: center;
+}
+
+#totalGDPAmt {
+  text-align: center;
+  font-size: 26pt;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  color: #ed980f;
+}
+
+#agricultureStat {
+  margin-top: 10px;
+  text-align: center;
+  margin-bottom: 2px;
+}
+
+#agriculturePercentage {
+  text-align: center;
+  font-size: 24pt;
+  margin-top: 2px;
+  color: #ed980f;
+}
 
 body {
-   background-image: linear-gradient(rgba(15,24,41,1), rgba(20,59, 82,1)); 
+   background-image: linear-gradient(rgba(15,24,41,1), rgba(20,59, 82,1));
+   margin: 0px;
+   padding: 0px;
 }
 
 label {

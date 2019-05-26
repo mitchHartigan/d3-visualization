@@ -1,6 +1,5 @@
 console.log('main.js loaded!');
 
-
 var margin = {top: 50, right: 50, bottom: 50, left: 50}
   , width = window.innerWidth - margin.left - margin.right - 400 // Use the window's width 
   , height = window.innerHeight - margin.top - margin.bottom - 200; // Use the window's height
@@ -14,7 +13,7 @@ const yScale = d3.scaleLinear()
                 .range([height, 0])
 
 const colorScale = d3.scaleLinear()
-                .range([ '#bae4ff', '#1083ce'])
+                .range([ '#112437', '#ed980f'])
                 .domain([5, 45])
 
 var line = d3.line()
@@ -127,7 +126,7 @@ svg.append('rect')
     .attr('class', 'overlay')
     .attr('width', width)
     .attr('height', height)
-    .on('mousemove', function(){ 
+    .on('mousemove', function() { 
       var mousePosX = d3.mouse(this)[0];
 
        if (mousePosX <= (width/2) ) { // 518 is the middle pixel of the graph
@@ -144,6 +143,9 @@ svg.append('rect')
 
          $('#hoverArea1972').fadeIn(400)
          document.getElementById('graphDescriptionYear').innerHTML = '1972';
+         document.getElementById('totalGDPAmt').innerHTML = '$2.7B USD';
+         document.getElementById('agriculturePercentage').innerHTML = '17.5%';
+         
 
          document.getElementById('graphDescriptionText1972').style.display = 'block';
          document.getElementById('graphDescriptionText1994').style.display = 'none';
@@ -155,13 +157,13 @@ svg.append('rect')
         $('#hoverArea2016').fadeOut(400)
         $('#hoverArea1972').fadeOut(400)
         
-   
         document.getElementById('graphDescriptionYear').innerHTML = '1994';
+        document.getElementById('totalGDPAmt').innerHTML = '$73.7B USD';
+        document.getElementById('agriculturePercentage').innerHTML = '1.1%';
 
         document.getElementById('graphDescriptionText1972').style.display = 'none';
         document.getElementById('graphDescriptionText1994').style.display = 'block';
         document.getElementById('graphDescriptionText2016').style.display = 'none';
-
 
        } else if (mousePosX >= ((width/3)*2)){ 
         $('#hoverArea1994').fadeOut(400)
@@ -169,11 +171,12 @@ svg.append('rect')
         $('#hoverArea2016').fadeIn(400)
 
         document.getElementById('graphDescriptionYear').innerHTML = '2016';
+        document.getElementById('totalGDPAmt').innerHTML = '$309.7B USD';
+        document.getElementById('agriculturePercentage').innerHTML = '0.5%';
 
         document.getElementById('graphDescriptionText1972').style.display = 'none';
         document.getElementById('graphDescriptionText1994').style.display = 'none';
         document.getElementById('graphDescriptionText2016').style.display = 'block';
-
        }
     })
 

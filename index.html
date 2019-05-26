@@ -22,14 +22,17 @@
     </div>
   </div>
 
-  <div class="centerParent">
-    <div class="centerElem graphDescriptionText">
-        <h1 id="graphDescriptionYear" class="textElem" >1972</h1>
+  <div class="" style="display: flex; flex-wrap: nowrap; justify-content: center;">
+    <div class="">
+        <h1 id="graphDescriptionYear" class="textElem">1972</h1>
 
         <p id="graphDescriptionText1972" class="textElem">
             Singapore gained independence in 1965, and 1972 marks a year where Singapore’s agricultural exports were
             beginning their final peak before their rapid industrialisation, and agricultural descent. At this point
             the finance sector of the nation was in its infancy, making up just 0.4% of the Singapore’s GDP.
+            <br></br>
+            This period was an economic boom for most of the world, and while this did affect Singapore’s private
+            sector, which saw a large amount of growth, it was nothing compared to what was to come for the small nation.
         </p>
 
         <p id="graphDescriptionText1994" class="textElem" style="display: none;">
@@ -52,19 +55,14 @@
         </p>
     </div>
 
-    <div class="centerElem">
-      <p class="textElem" id="graphDescriptionStats1972">1972 Text! ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-         quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-         consequat. Duis aute irure dolor in reprehenderit in voluptate
-      </p>
+    <div class="centerElem textElem" id="graphDescriptionStats1972">
+      <div class="graphStatsBox">
+          <h3 id="totalGDPStat">Total GDP:</h3>
+          <h4 id="totalGDPAmt">$2.7B USD</h4>
 
-      <p class="textElem" id="graphDescriptionText1994" style="display: none;">1994 text! ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate
-     </p>
-
+          <h3 id="agricultureStat">Agriculture as % of GDP:</h3>
+          <h4 id="agriculturePercentage">17.5%</h4>
+      </div>
     </div>
   </div>
 
@@ -112,9 +110,13 @@
         <input id="radio2016" type="radio" name="radio" onfocus="render2016()"/><label for="radio2016">2016</label>
       </div>
     </div>
-    </div>
+  </div>
 
-  <div id="treemap1972Parent" class="centerParent" style="margin-bottom: 70px; margin-top: 50px;">
+  <div class="centerParent" style="margin-top: 50px;">
+    <h2 id="treemapTitle"><i>Singapore's Exports by % of GDP</i></h2>
+  </div>
+
+  <div id="treemap1972Parent" class="centerParent" style="margin-bottom: 70px;">
     <div class="centerElem">
       <svg id="treemap1972" width="1200" height="650">
         <g>
@@ -140,6 +142,24 @@
         </svg>
       </div>
     </div>
+
+  <div style="display: flex; justify-content: center; background-color: black; padding-top: 30px; padding-bottom: 40px; margin-top: 100px;">
+    <div style="margin-right: 200px;">
+      <h1 class="footerTextTitle" style="margin-top: 0px;">Data Visualization by:</h1>
+      <h4 class="footerTextData"><i>Mitchell Hartigan - mhar3516</i></h4> 
+      <h4 class="footerTextData"><i>Adam Vozzo - avoz3181</i></h4>
+      <h4 class="footerTextData"><i>Viktor Zivcec - vziv9624</i></h4>
+    </div>
+
+    <div style="margin-left: 90px;">
+      <h1 class="footerTextTitle" style="margin-top: 0px;">Data Sources:</h1>
+      <h3 class="footerTextData"><i>https://data.worldbank.org/indicator/TX.VAL.AGRI.ZS.UN?locations=SG-ID-MY-TH</i></h3>
+      <h3 class="footerTextData"><i>https://data.worldbank.org/indicator/AG.LND.AGRI.ZS?locations=SG-ID-MY-TH</i></h3>
+      <h3 class="footerTextData"><i>https://data.worldbank.org/indicator/BX.GSR.INSF.ZS?locations=SG</i></h3>
+      <h3 class="footerTextData"><i>https://www.ceicdata.com/en/indicator/singapore/market-capitalization--nominal-gdp</i></h3>
+      <h3 class="footerTextData"><i>https://atlas.media.mit.edu/en/profile/country/sgp/</i></h3>
+    </div>
+  </div>
 
   <script src="data.js"></script>
   <script src="main.js"></script>
