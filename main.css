@@ -97,6 +97,12 @@
   text-align: center;
 }
 
+.flexBox-Centered {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
 .textElem {
   width: 500px;
   text-align: left;
@@ -112,11 +118,32 @@
   font-size: 18pt;
 }
 
+.graph {
+  display: inline-block;
+  width: 100%;
+}
+
+.graph-Container {
+  text-align: center;
+}
+
 .footerTextData {
   color: white;
   font-family: 'Open Sans';
-  font-size: 14pt;
+  font-size: 12pt;
 }
+
+.footer-Container {
+  width: 100%;
+  background-color: black;
+  padding: 30px 0px 20px 0px;
+  margin-top: 100px;
+  text-align: center;
+}
+
+/* .footer-Data-Container {
+  max-width: 60%;
+}   */
 
 .yAxisLabel {
   fill: white;
